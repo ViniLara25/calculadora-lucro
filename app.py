@@ -6,7 +6,10 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 # 2. Configura a app e o banco de dados
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///produtos.db'
+import os
+
+# Pega a URL do banco de dados do ambiente, ou usa o SQLite se ela não existir
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite:///produtos.db'
 CORS(app)
 
 # 3. Cria a instância do banco de dados
