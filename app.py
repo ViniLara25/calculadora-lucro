@@ -3,14 +3,14 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 
 # 1. Cria a instância do Flask
-app = Flask(__name__, static_folder='static')app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
+CORS(app)
 
 # 2. Configura a app e o banco de dados
 import os
 
 # Pega a URL do banco de dados do ambiente, ou usa o SQLite se ela não existir
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'sqlite:///produtos.db'
-db = SQLAlchemy(app)
 
 # 3. Cria a instância do banco de dados
 db = SQLAlchemy(app)
@@ -99,8 +99,6 @@ def deletar_produto(produto_id):
     db.session.delete(produto)
     db.session.commit()
     return jsonify({'mensagem': 'Produto deletado com sucesso!'})
-
-from flask import send_from_directory
 
 @app.route('/')
 def home():
