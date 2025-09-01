@@ -1,7 +1,7 @@
 // Função para carregar e exibir a lista de produtos
 async function carregarProdutos() {
     try {
-        const response = await fetch('http://127.0.0.1:5000/produtos');
+        const response = await fetch('/produtos');
         const produtos = await response.json();
         
         const listaProdutosDiv = document.getElementById('lista-produtos');
@@ -49,7 +49,7 @@ document.getElementById('calcular').addEventListener('click', async function() {
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/calcular', {
+        const response = await fetch('/calcular', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ document.addEventListener('click', async function(event) {
         
         if (confirmacao) {
             try {
-                const response = await fetch(`http://127.0.0.1:5000/produtos/${produtoId}`, {
+                const response = await fetch(`/produtos/${produtoId}`, {
                     method: 'DELETE'
                 });
                 
