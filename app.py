@@ -100,6 +100,12 @@ def deletar_produto(produto_id):
     db.session.commit()
     return jsonify({'mensagem': 'Produto deletado com sucesso!'})
 
+from flask import send_from_directory
+
+@app.route('/')
+def home():
+    return send_from_directory('.', 'index.html')
+
 # 6. Cria as tabelas do banco de dados
 with app.app_context():
     db.create_all()
