@@ -4,7 +4,7 @@
 
 **Veja a demonstração ao vivo:** [vinicius.pythonanywhere.com](http://vinicius.pythonanywhere.com/)
 
-![Screenshot da Aplicação](Tela Calculadora.png)
+![Screenshot da Aplicação](Tela%20Calculadora.png)
 ---
 
 ## ✨ Funcionalidades
