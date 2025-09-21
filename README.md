@@ -3,6 +3,7 @@
 > Um projeto web simples para calcular o preço de venda de um produto com base no seu custo, margem de lucro desejada e impostos (ICMS). A aplicação salva um histórico de todos os produtos calculados e permite a sua visualização e exclusão.
 
 **Veja a demonstração ao vivo:** [vinicius.pythonanywhere.com](http://vinicius.pythonanywhere.com/)
+
 ![Screenshot da Aplicação](Tela Calculadora.png)
 ---
 
