@@ -108,6 +108,9 @@ wheel==0.42.0
 xdg==5
 xkit==0.0.0
 yt-dlp==2024.4.9
+=======
+=======
+>>>>>>> f204c38 (Add Reuirements)
 anyio==4.9.0
 argon2-cffi==25.1.0
 argon2-cffi-bindings==21.2.0
@@ -230,5 +233,7 @@ wcwidth==0.2.13
 webcolors==24.11.1
 webencodings==0.5.1
 websocket-client==1.8.0
+<<<<<<< HEAD
 >>>>>>> f204c38 (Add Reuirements)
-
+=======
+>>>>>>> f204c38 (Add Reuirements)
